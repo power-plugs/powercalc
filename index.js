@@ -22,12 +22,12 @@ module.exports = class Calc extends Plugin {
           if(num1 == 0 || num2 == 0) return "Cannot divide by zero.";
           return num1 * num2;
         case "^":
-          return num1 ^ num2;
+          return Math.pow(num1, num2);
         default:
           return `Unknown Operator: ${op}`;
       }
     } else {
-      return `Usage: ${powercord.api.commands.prefix}calc <num1> <op> <num2>`;
+      return `Usage: ${powercord.api.commands.prefix} calc <num1> <op> <num2>`;
     }
   }
 };
