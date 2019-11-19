@@ -27,7 +27,7 @@ module.exports = class Calc extends Plugin {
           return `Unknown Operator: ${op}`;
       }
     } else {
-      return "Usage: .calc <num1> <op> <num2>";
+      return `Usage: ${powercord.api.commands.prefix}calc <num1> <op> <num2>`;
     }
   }
 };
