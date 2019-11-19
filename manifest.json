@@ -1,0 +1,7 @@
+{
+  "name": "Powercord Calculator",
+  "version": "1.0.0",
+  "description": "Usage: .calc <num1> <op> <num2>",
+  "author": "Lil Sizzurp",
+  "license": "MIT"
+}
