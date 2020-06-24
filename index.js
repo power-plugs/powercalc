@@ -2,7 +2,13 @@ const { Plugin } = require('powercord/entities');
 
 module.exports = class Calc extends Plugin {
   startPlugin() {
-    this.registerCommand('calc', [], 'Simple Calculator.', '{c} [num] [op] [num]', (args) => ({send: false, result: "Result: " + this.calc(args)}));
+    powercord.api.commands.registerCommand({
+        command: 'calc',
+        aliases: [],
+        description: 'Simple Calculator.',
+        usage: '{c} [num] [op] [num]',
+        executor: (args) => ({send: false, result: "Result: " + this.calc(args)})
+    })
   }
 
   calc(args) {
